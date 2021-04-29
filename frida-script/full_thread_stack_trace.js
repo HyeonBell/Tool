@@ -1,3 +1,8 @@
+/*
+    2021. 04. 29 made by hyeonbell
+    version : 0.1
+ */
+
 function thread_trace(){
     var test = Java.use("java.lang.Thread").currentThread();
 
