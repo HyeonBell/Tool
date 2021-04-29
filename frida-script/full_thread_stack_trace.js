@@ -1,33 +1,29 @@
+function thread_trace(){
+    var test = Java.use("java.lang.Thread").currentThread();
+
+    var hashmap = Java.use("java.util.HashMap");
+    var cast = Java.cast(test.getAllStackTraces(), hashmap);
+    var iter = cast.entrySet().iterator();
+    console.log("---------------------------------------------------------------------------------");
+    while (iter.hasNext()){
+        var entry = Java.cast(iter.next(), Java.use("java.util.HashMap$HashMapEntry"));
+        var thread = Java.cast(entry.getKey(), Java.use("java.lang.Thread"));
+        console.log("ID : " + thread.getId()+ ", Name : " + thread.getName() + ", Priority : " + thread.getPriority() +  "\nState : " + thread.getState() + ", ThreadGroup : " + thread.getThreadGroup());
+        console.log("StackTrace ┐  \n" + thread.getStackTrace().toString().replaceAll(',','\n'));
+        console.log("---------------------------------------------------------------------------------");
+    }
+}
+
 setImmediate(function(){
     Java.perform(function(){
-        var test = Java.use("java.lang.Thread").currentThread();
-        console.log(test);
-        //console.log(test.class.getDeclaredMethods())
-        console.log(typeof test.getAllStackTraces());
-        console.log(test.getAllStackTraces().$className);
+        var runtime = Java.use("java.lang.Runtime"); // Target class you want.
+        var imp9 = runtime.getRuntime()['exit'].overload('int'); // Overloading put in data you want as same.
 
-        var hashmap = Java.use("java.util.HashMap");
-        var cast = Java.cast(test.getAllStackTraces(), hashmap);
-        console.log(cast);
-        console.log(typeof cast.entrySet());
-
-        // Code for comprehension
-        console.log(cast.entrySet().$className);
-        console.log(cast.entrySet().iterator());
-        console.log(cast.entrySet().iterator().$className);
-        // Code for comprehension
-
-        var iter = cast.entrySet().iterator();
-        while (iter.hasNext()){
-            var entry = Java.cast(iter.next(), Java.use("java.util.HashMap$HashMapEntry"));
-            console.log("key : "+entry.getKey() + ", value : " + entry.getValue());
-            console.log("key type : " + typeof entry.getKey() + " className : "+ entry.getKey().$className);
-            console.log("value type : " + typeof entry.getValue() + " className : " + entry.getValue().$className);
-            var thread = Java.cast(entry.getKey(), Java.use("java.lang.Thread"));
-            //console.log("method : " + thread.class.getDeclaredMethods());
-            console.log(thread.currentThread().getStackTrace());
-
+        imp9.implementation = function(param){
+            console.log("java.lang.Runtime.getRuntime exit hooked!"); // Code that succeeded hooking
+            console.log("exit return value : " + param); // Same.
+            thread_trace(); // Trace call stack of whole program scope at time that target class hooked.
+            return runtime.getRuntime()['exit'].call(this, param); // Code for normally function executing.
         }
-
-    });
-});
+    })
+})
