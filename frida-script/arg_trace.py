@@ -2,6 +2,7 @@
     # Made by hyeonbell
     # 2021. 04. 30
     # version 0.1
+    # purpose : Trace whole argument of java instance with infomation made by hooking code that causing exception call stack trace infomation
 
 """
 
