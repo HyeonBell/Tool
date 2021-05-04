@@ -1,4 +1,4 @@
-# frida-script
+# Frida-script
 
 
 ## 1. arg_trace.py
