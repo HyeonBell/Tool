@@ -22,11 +22,13 @@
 5. Overloading Calculate --> Not yet no implement.
 6. Exit
 
+ > menu select you want
 ```
 
 
 Setup
 ```
+ > 1
 1. Setup to target
 2. Setup to data that have to trace in exception result
  > 1
@@ -59,7 +61,7 @@ Setup to script
 3. Trace argument of exception
 ```
 
-  
+
 -----
 
 2. full_thread_stack_trace.js
