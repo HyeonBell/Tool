@@ -59,7 +59,7 @@ Setup to script
 3. Trace argument of exception
 ```
 
-
+  
 -----
 
 2. full_thread_stack_trace.js
