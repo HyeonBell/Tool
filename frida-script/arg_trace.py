@@ -167,19 +167,19 @@ class ClassFrida:
             jscode = """
                 var target"""+count+""" = Java.use(\"""" + class_name + """\");
                 var overloadCount"""+count+""" = target"""+count+"""[\""""+method_name[1:]+"""\"].overloads.length;
-                
+
                 for (var i=0; i < overloadCount"""+count+"""; i++) {
                     target"""+count+"""[\""""+method_name[1:]+"""\"].overloads[i].implementation = function() {
-                    
+
                     var ret_val = this[\""""+method_name[1:]+"""\"].apply(this, arguments);
                     send(\""""+parse_info+""" arguments : \" + arguments);
                     check_object(arguments);
                     send(\""""+parse_info+""" ret : \"+ ret_val);
                     check_object(ret_val);
 
-                    return ret_val;    
+                    return ret_val;
                     }
-                } 
+                }
             """
             return jscode
         return closer_template_jscode
@@ -274,11 +274,6 @@ class ClassFrida:
             self.method_name = "['" + self.method_name+"']"
         else:
             self.method_name = ".$init"
-
-        # test code
-        self.PACKAGE_NAME = "viva.republica.toss"
-        self.class_name = "o.afc"
-        self.method_name = ".$init"
 
         try:
             program_log("v", "Try to connect device with USB connection")
@@ -377,7 +372,7 @@ class ClassFrida:
 
     def setup_err_js_code(self):
         self.jscode = """
-            // For obtaining parameter of target, setup error parameter. 
+            // For obtaining parameter of target, setup error parameter.
             Java.perform(function() {
                 var target = Java.use(\"""" + self.class_name + """\");
                 var imp = target""" + self.method_name + self.error_overloading + """;
@@ -393,7 +388,7 @@ class ClassFrida:
     def setup_exception_trace_code(self):
         output_argument = "+ " + self.argument.replace(", ", " + \", \" + ") + " + \" #sig_argend\""
         self.jscode = """
-            // Trace Exception 
+            // Trace Exception
             Java.perform(function() {
                 var target = Java.use(\"""" + self.class_name + """\");
                 var imp = target""" + self.method_name + self.parameter + """;
@@ -405,7 +400,7 @@ class ClassFrida:
                     return target""" + self.method_name + """.call(this, """+self.argument+""");
                 }
             })
-        
+
         """
         self.error_wrapper_setup_jscode()
 

@@ -25,7 +25,7 @@
 
 ```
 
-###1. Setup
+Setup
 ```
 1. Setup to target
 2. Setup to data that have to trace in exception result
@@ -42,16 +42,14 @@ Is method init constructor?(Y/n) --> If this is init meaning 'y', auto setup to 
 [INFO] Target Waiting for %resume. --> Frida agent waiting state for %resume put in
 ```
 
-###2. Show data
+Show data
 ```
 > 2
 1. Show current JS code
 2. Show exception data
- >
-
 ```
 
-###3. Setup to script
+Setup to script
 ```
 1. Cause error overloading
 2. Trace exception
