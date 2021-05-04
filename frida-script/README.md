@@ -13,7 +13,7 @@
 -------------------------------------------------
         Trace exception argument in runtime
 -------------------------------------------------
-
+[*] Status : SESSION : Session(pid=27306), TARGET : test.test.app
 
 1. Setup
 2. Show data
@@ -23,6 +23,7 @@
 6. Exit
 
 ```
+
 
 Setup
 ```
@@ -41,6 +42,7 @@ Is method init constructor?(Y/n) --> If this is init meaning 'y', auto setup to 
 [INFO] Target Waiting for %resume. --> Frida agent waiting state for %resume put in
 ```
 
+
 Show data
 ```
 > 2
@@ -48,8 +50,10 @@ Show data
 2. Show exception data
 ```
 
+
 Setup to script
 ```
+> 3
 1. Cause error overloading
 2. Trace exception
 3. Trace argument of exception
