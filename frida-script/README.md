@@ -1,5 +1,4 @@
 # frida-script
------
 
 
 1. arg_trace.py
@@ -55,6 +54,9 @@ Setup to script
 2. Trace exception
 3. Trace argument of exception
 ```
+
+
+-----
 
 2. full_thread_stack_trace.js
 - Trace method call stack you want by exception handling.
