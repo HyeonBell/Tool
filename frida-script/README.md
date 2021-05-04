@@ -1,7 +1,7 @@
 # frida-script
 
 
-1. arg_trace.py
+## 1. arg_trace.py
 - Trace Arguments of Exception by create application Exception infomation with frida implementation so called 'hooking'.
 - Create JS code each hooking automatically. But there are needed to setup infomation a little bit.
 - Causing Exception by using android.util.Log and java.lang.Exception.
@@ -111,7 +111,7 @@ Which one choices?
 
 -----
 
-2. full_thread_stack_trace.js
+## 2. full_thread_stack_trace.js
 - Trace method call stack you want by exception handling.
 - This code used Java.cast(). It's to using for tracing value of return like java.util.HashMap  
 
