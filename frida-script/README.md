@@ -112,7 +112,7 @@ Which one choices?
 -----
 
 ## 2. full_thread_stack_trace.js
-- Trace method call stack you want by exception handling.
+- Trace thread you want with exception handling.
 - This code used Java.cast(). It's to using for tracing value of return like java.util.HashMap  
 
 Usage
