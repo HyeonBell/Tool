@@ -1,13 +1,6 @@
 # frida-script
 
 
-
-
-
-
-
-        
-
 1. arg_trace.py
 - Trace Arguments of Exception by create application Exception infomation with frida implementation so called 'hooking'
 - Causing Exception by using android.util.Log and java.lang.Exception
