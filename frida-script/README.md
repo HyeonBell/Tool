@@ -113,3 +113,8 @@ Which one choices?
 2. full_thread_stack_trace.js
 - Trace method call stack you want by exception handling.
 - This code used Java.cast(). It's to using for tracing value of return like java.util.HashMap  
+
+Usage
+```
+> frida -U -f test.test.app -l full_thread_stack_trace.js --no-pause
+```
