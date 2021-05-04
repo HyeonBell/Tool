@@ -3,6 +3,7 @@
 
 1. arg_trace.py
 - Trace Arguments of Exception by create application Exception infomation with frida implementation so called 'hooking'.
+- Create JS code each hooking automatically. But there are needed to setup infomation a little bit.
 - Causing Exception by using android.util.Log and java.lang.Exception.
 - If you run at first, There are selectable overloading method.
 - Then select overloading method, Insert code causing exception at second running.
