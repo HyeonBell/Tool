@@ -1,7 +1,7 @@
 # Frida-script [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FHyeonBell%2FTool%2Ftree%2Fmaster%2Ffrida-script&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 
-## 1. arg_trace.py - Not Yet Finished. I will complete as soon as possible. :robot:
+## 1. arg_trace.py - :snail: Not Yet Finished. I will complete as soon as possible.
 - Trace Arguments of Exception by create application Exception infomation with frida implementation so called 'hooking'.
 - Create JS code each hooking automatically. But there are needed to setup infomation a little bit.
 - Causing Exception by using android.util.Log and java.lang.Exception.
