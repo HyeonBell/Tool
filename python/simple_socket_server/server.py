@@ -22,7 +22,7 @@ def global_logging(type_d, data):
 class Menu:
 
     def __init__(self):
-        self.menu = """Welcome, It's Problem Anwser Server.\n\n 1. Start up server\n 2. Exit
+        self.menu = """Welcome, It's Server.\n\n 1. Start up server\n 2. Exit
          
         """
         self.choice = None
