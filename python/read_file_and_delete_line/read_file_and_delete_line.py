@@ -2,7 +2,6 @@
 import time
 
 def read_file_and_delete_line():
-    global anwser_request_box
     time.sleep(1)
     read_f = open("target.txt", "r")
     check = read_f.read()
